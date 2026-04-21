@@ -14,6 +14,9 @@ public class Restaurant {
     }
 
     public void prepareOrder(Order order) {
+        if (order == null) {
+            throw new IllegalArgumentException("Cannot prepare a null order.");
+        }
         System.out.println(restaurantName + " is preparing " + order.getItemName() + ".");
         System.out.println("Processing " + order.toString());
     }

@@ -3,6 +3,8 @@ public abstract class User {
     private String email;
 
     public User(String name, String email) {
+        validateName(name);
+        validateEmail(email);
         this.name = name;
         this.email = email;
     }
@@ -14,6 +16,7 @@ public abstract class User {
     }
 
     public void setName(String name) {
+        validateName(name);
         this.name = name;
     }
 
@@ -22,6 +25,19 @@ public abstract class User {
     }
 
     public void setEmail(String email) {
+        validateEmail(email);
         this.email = email;
+    }
+
+    private void validateName(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new InvalidUserException("Name cannot be empty.");
+        }
+    }
+
+    private void validateEmail(String email) {
+        if (email == null || !email.contains("@")) {
+            throw new InvalidUserException("Invalid email address: " + email);
+        }
     }
 }

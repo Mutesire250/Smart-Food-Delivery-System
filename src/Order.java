@@ -4,6 +4,9 @@ public class Order {
     private double price;
 
     public Order(int orderId, String itemName, double price) {
+        validateOrderId(orderId);
+        validateItemName(itemName);
+        validatePrice(price);
         this.orderId = orderId;
         this.itemName = itemName;
         this.price = price;
@@ -14,6 +17,7 @@ public class Order {
     }
 
     public void setOrderId(int orderId) {
+        validateOrderId(orderId);
         this.orderId = orderId;
     }
 
@@ -22,6 +26,7 @@ public class Order {
     }
 
     public void setItemName(String itemName) {
+        validateItemName(itemName);
         this.itemName = itemName;
     }
 
@@ -30,7 +35,26 @@ public class Order {
     }
 
     public void setPrice(double price) {
+        validatePrice(price);
         this.price = price;
+    }
+
+    private void validateOrderId(int orderId) {
+        if (orderId <= 0) {
+            throw new InvalidOrderException("Order ID must be positive.");
+        }
+    }
+
+    private void validateItemName(String itemName) {
+        if (itemName == null || itemName.trim().isEmpty()) {
+            throw new InvalidOrderException("Item name cannot be empty.");
+        }
+    }
+
+    private void validatePrice(double price) {
+        if (price <= 0) {
+            throw new InvalidOrderException("Price must be greater than zero.");
+        }
     }
 
     @Override
