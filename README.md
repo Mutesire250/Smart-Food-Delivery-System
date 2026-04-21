@@ -1,15 +1,15 @@
-# 🍕 Smart Food Delivery System
+#  Smart Food Delivery System
 
 A robust, Java-based Object-Oriented Programming (OOP) system designed to simulate a real-world food delivery workflow with comprehensive **Exception Handling**.
 
-## 🚀 Key Features
+##  Key Features
 - **OOP Architecture**: Demonstrates Encapsulation, Inheritance, Abstraction, and Polymorphism.
 - **Robust Exception Handling**: Custom hierarchy of unchecked exceptions to ensure graceful failure recovery.
 - **Interactive Console UI**: User-friendly prompts with built-in validation and retry mechanisms.
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ### Core Classes
 - **User (Abstract)**: Base class for all system participants.
@@ -20,7 +20,7 @@ A robust, Java-based Object-Oriented Programming (OOP) system designed to simula
 
 ---
 
-## ⚠️ Exception Handling Mechanism
+##  Exception Handling Mechanism
 
 The system is designed to handle business rule violations without crashing. It uses a custom hierarchy of **Unchecked Exceptions**:
 
@@ -45,7 +45,7 @@ RuntimeException (Java Built-in)
 
 ---
 
-## 🛠️ How to Run
+##  How to Run
 
 1. **Compile**:
    ```bash
@@ -58,5 +58,5 @@ RuntimeException (Java Built-in)
 
 ---
 
-## 👥 Contributors
+##  Contributors
 - **Mutesire250**
