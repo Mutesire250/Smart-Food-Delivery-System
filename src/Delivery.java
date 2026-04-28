@@ -33,4 +33,8 @@ public class Delivery {
     public String getStatus() {
         return status;
     }
+
+    public String getLocation() {
+        return location;
+    }
 }
